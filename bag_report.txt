@@ -1,4 +1,4 @@
-ID : F1
+ID : F1
 Title : Нарушена контрастность цвета, плохо читабельный текс на светлом фоне
 Environment : симулятор в Chrome - iPhon 12 Pro
 Steps to Reproduce : 1. Зайти на сайт https://www.foodpanda.com/
