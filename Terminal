@@ -1,0 +1,79 @@
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir foldername
+
+3) Зайти в папку
+cd !$
+
+4) Создать 3 папки 
+mkdir foldername1 foldername2 foldername3
+или - mkdir -p {foldername1,foldername1,foldername1}
+
+5) Зайти в любую папку 
+cd foldername1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch filename1.txt filename2.txt filename3.txt filename4.json filename5.json
+
+7) Создать 3 папки
+mkdir foldername1 foldername2 foldername3
+
+8. Вывести список содержимого папки
+ls -la
+
+9) + Открыть любой txt файл
+cat >> filename1.txt
+
+10) + написать туда что-нибудь, любой текст
+пишем строку, нажимаем Enter
+11) + сохранить и выйти
+Ctrl+С
+12) Выйти из папки на уровень выше
+cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку
+mv -t dir dir1/filename1 dir1filename2   - параметр -t ипользуется для указания каталога назначения (пример mv -t Q2 Q1/q1.txt Q1/q2.txt)
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку
+cp dir1/filename1 dir1/filename2 dir  (пример  cp Q1/q3.txt Q1/q4.json Q2)
+
+15) Найти файл по имени
+find . -name "filename" (пример find . -name "qa1.txt")
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+она даёт возможность пользователям сортировать и фильтровать текст на основе сложных правил
+
+17) вывести несколько первых строк из текстового файла
+head -2 dir/filename (пример head -2 Q2/qa1.txt)
+
+18) вывести несколько последних строк из текстового файла
+tail -2 dir/filename (пример tail -2 Q2/qa1.txt)
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+20) вывести дату и время
+date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+curl http://162.55.220.72:5005/terminal-hw-request
+curl "http://162.55.220.72:5005/get_method?name=ola&age=32"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+создаем папку с именем test и файл myscript.sh, следующего содержания:
+#!/bin/bash
+cd test
+mkdir Q1 Q2 Q3
+cd Q1
+touch q1.txt q2.txt q3.txt q4.json q5.json
+mkdir Qa1 Qa2 Qa3
+ls -la
+mv -t ../Q2 q1.txt q2.txt
+
+запускает Git Bush и прописываем в строке ./myscript.sh
+Нажимаем Enter
